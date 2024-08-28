@@ -10,11 +10,11 @@ def test_find_repeated_sequences_1():
     assert result == expected
 
 def test_find_repeated_sequences_2():
-    k = 8
+    k = 1
     dna = "CGG"
     expected = ['G']
     expected.sort()
-    result = find_repeated_sequences('CGG',1)
+    result = find_repeated_sequences(dna,k)
     result.sort()
     assert len(result) == len(expected)
     assert result == expected
