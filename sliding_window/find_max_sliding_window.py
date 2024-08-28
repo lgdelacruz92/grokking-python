@@ -13,7 +13,7 @@ def find_max_sliding_window(nums, w):
         prev_num = nums[i-1]
 
         delayed_del[prev_num] += 1
-        while -max_h[0] in delayed_del and delayed_del[-max_h[0]] > 0:
+        while max_h and -max_h[0] in delayed_del and delayed_del[-max_h[0]] > 0:
             delayed_del[-max_h[0]] -= 1
             heapq.heappop(max_h)
         
