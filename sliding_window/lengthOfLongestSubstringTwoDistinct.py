@@ -1,6 +1,6 @@
 from collections import defaultdict
 class Solution:
-    def lengthOfLongestSubstringTwoDistinct(self, s: str) -> int:
+    def numberOfSpecialSubstrings(self, s: str) -> int:
         record = defaultdict(int)
 
         n = len(s)
