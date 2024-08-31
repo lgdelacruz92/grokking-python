@@ -18,3 +18,13 @@ def test_minMeetingRooms2_2():
 
     result = solution.minMeetingRooms(intervals)
     assert result == expected
+
+def test_minMeetingRooms2_3():
+    intervals = [[13,15],[1,13],[6,9]]
+
+
+    solution = Solution()
+    expected = 2
+
+    result = solution.minMeetingRooms(intervals)
+    assert result == expected
