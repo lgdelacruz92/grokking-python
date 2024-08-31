@@ -1,4 +1,4 @@
-from sliding_window.minSubArrayLen import Solution
+from prefix_sums.minSubArrayLen import Solution
 
 def test_minSubArrayLen_1():
     target = 7
