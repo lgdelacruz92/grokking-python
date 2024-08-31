@@ -5,6 +5,7 @@ def test_minSubArrayLen_1():
     nums = [2,3,1,2,4,3]
     solution = Solution()
     result = solution.minSubArrayLen(target, nums)
+    result = solution.minSubArrayLen2(target, nums)
 
     expected = 2
     assert result == expected

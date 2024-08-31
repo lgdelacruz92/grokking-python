@@ -14,3 +14,6 @@ class Solution:
                 cur_sum -= nums[left_ptr]
                 left_ptr += 1
         return int(ans) if ans != float('inf') else 0
+    
+    def minSubArrayLen2(self, target: int, nums: List[int]) -> int:
+        return 0
