@@ -24,6 +24,5 @@ def test_utils_1():
 
     expected = make_test1_expected()
     result = make_tree_node_from_array(arr)
-    # print_tree_node(result)
     assert_root(expected, result)
     

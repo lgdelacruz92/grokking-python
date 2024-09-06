@@ -7,15 +7,18 @@ def print_tree_node(node: Optional[TreeNode]):
         return
     
     q = deque()
-    q.append(node)
+    q.append((node, 0))
     while q:
-        next_node = q.popleft()
-        print(next_node.val)
+        next_node, level = q.popleft()
+        prefix = ''
+        for i in range(level):
+            prefix += '-'
+        print(f'{prefix}{next_node.val}')
         if next_node.left:
-            q.append(next_node.left)
+            q.append((next_node.left, level+1))
         
         if next_node.right:
-            q.append(next_node.right)
+            q.append((next_node.right, level+1))
 
 
 def make_tree_node_from_array(arr: List[Optional[int]]) -> Optional[TreeNode]:
@@ -37,6 +40,8 @@ def make_tree_node_from_array(arr: List[Optional[int]]) -> Optional[TreeNode]:
     # arr_nodes: same as arr but in node format
     # connect it's children
     for i, node in enumerate(arr_nodes):
+        if i == 6:
+            print('here')
         left_child = arr_nodes[i * 2 + 1] if i * 2 + 1 < n else None
         right_child = arr_nodes[i * 2 + 2] if i * 2 + 2 < n else None
         if node:
